@@ -15,7 +15,7 @@ class UsersStream(MockStream):
     replication_key = "updated_at"
 
     schema = th.PropertiesList(
-        th.Property("id", th.StringType),
+        th.Property("id", th.IntegerType),
         th.Property("name", th.StringType),
         th.Property("updated_at", th.DateTimeType),
     ).to_dict()
@@ -50,7 +50,7 @@ class AnimalsStream(MockStream):
     selected_by_default = False
 
     schema = th.PropertiesList(
-        th.Property("id", th.StringType),
+        th.Property("id", th.IntegerType),
         th.Property("animal_name", th.StringType),
         th.Property("updated_at", th.DateTimeType),
     ).to_dict()
