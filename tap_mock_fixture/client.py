@@ -1,4 +1,4 @@
-"""Custom client handling, including MockIncrementalStream base class."""
+"""Custom client handling, including MockFixtureStream base class."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ from typing import Iterable
 from singer_sdk.streams import Stream
 
 
-class MockIncrementalStream(Stream):
-    """Stream class for MockIncremental streams."""
+class MockStream(Stream):
+    """Stream class for MockStream streams."""
 
     def get_records(
         self,
@@ -26,11 +26,4 @@ class MockIncrementalStream(Stream):
         Raises:
             NotImplementedError: If the implementation is TODO
         """
-        records = [
-            {"id": 1, "name": "A", "updated_at": "2023-01-01"},
-            {"id": 2, "name": "B", "updated_at": "2023-02-01"},
-            {"id": 3, "name": "C", "updated_at": "2023-03-01"},
-        ]
-
-        for record in records:
-            yield record 
+        raise NotImplementedError

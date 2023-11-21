@@ -1,6 +1,6 @@
-# tap-mock-incremental
+# tap-mock-fixture
 
-`tap-mock-incremental` is a Singer tap for MockIncremental.
+`tap-mock-fixture` is a Singer tap for MockFixture.
 
 Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
@@ -13,13 +13,13 @@ Developer TODO: Update the below as needed to correctly describe the install pro
 Install from PyPi:
 
 ```bash
-pipx install tap-mock-incremental
+pipx install tap-mock-fixture
 ```
 
 Install from GitHub:
 
 ```bash
-pipx install git+https://github.com/ORG_NAME/tap-mock-incremental.git@main
+pipx install git+https://github.com/ORG_NAME/tap-mock-fixture.git@main
 ```
 
 -->
@@ -34,7 +34,7 @@ Developer TODO: Provide a list of config options accepted by the tap.
 This section can be created by copy-pasting the CLI output from:
 
 ```
-tap-mock-incremental --about --format=markdown
+tap-mock-fixture --about --format=markdown
 ```
 -->
 
@@ -42,7 +42,7 @@ A full list of supported settings and capabilities for this
 tap is available by running:
 
 ```bash
-tap-mock-incremental --about
+tap-mock-fixture --about
 ```
 
 ### Configure using environment variables
@@ -59,14 +59,14 @@ Developer TODO: If your tap requires special access on the source system, or any
 
 ## Usage
 
-You can easily run `tap-mock-incremental` by itself or in a pipeline using [Meltano](https://meltano.com/).
+You can easily run `tap-mock-fixture` by itself or in a pipeline using [Meltano](https://meltano.com/).
 
 ### Executing the Tap Directly
 
 ```bash
-tap-mock-incremental --version
-tap-mock-incremental --help
-tap-mock-incremental --config CONFIG --discover > ./catalog.json
+tap-mock-fixture --version
+tap-mock-fixture --help
+tap-mock-fixture --config CONFIG --discover > ./catalog.json
 ```
 
 ## Developer Resources
@@ -89,10 +89,10 @@ Create tests within the `tests` subfolder and
 poetry run pytest
 ```
 
-You can also test the `tap-mock-incremental` CLI interface directly using `poetry run`:
+You can also test the `tap-mock-fixture` CLI interface directly using `poetry run`:
 
 ```bash
-poetry run tap-mock-incremental --help
+poetry run tap-mock-fixture --help
 ```
 
 ### Testing with [Meltano](https://www.meltano.com)
@@ -112,7 +112,7 @@ Next, install Meltano (if you haven't already) and any needed plugins:
 # Install meltano
 pipx install meltano
 # Initialize meltano within this directory
-cd tap-mock-incremental
+cd tap-mock-fixture
 meltano install
 ```
 
@@ -120,9 +120,9 @@ Now you can test and orchestrate using Meltano:
 
 ```bash
 # Test invocation:
-meltano invoke tap-mock-incremental --version
+meltano invoke tap-mock-fixture --version
 # OR run a test `elt` pipeline:
-meltano elt tap-mock-incremental target-jsonl
+meltano elt tap-mock-fixture target-jsonl
 ```
 
 ### SDK Dev Guide

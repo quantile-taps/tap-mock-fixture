@@ -4,7 +4,7 @@ import datetime
 
 from singer_sdk.testing import get_tap_test_class
 
-from tap_mock_incremental.tap import TapMockIncremental
+from tap_mock_fixture.tap import TapMockFixture
 
 SAMPLE_CONFIG = {
     "start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
@@ -13,8 +13,8 @@ SAMPLE_CONFIG = {
 
 
 # Run standard built-in tap tests from the SDK:
-TestTapMockIncremental = get_tap_test_class(
-    tap_class=TapMockIncremental,
+TestTapMockFixture = get_tap_test_class(
+    tap_class=TapMockFixture,
     config=SAMPLE_CONFIG,
 )
 

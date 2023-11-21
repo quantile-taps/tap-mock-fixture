@@ -1,1 +1,1 @@
-"""Test suite for tap-mock-incremental."""
+"""Test suite for tap-mock-fixture."""

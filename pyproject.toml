@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "tap-mock-incremental"
+name = "tap-mock-fixture"
 version = "0.0.1"
-description = "`tap-mock-incremental` is a Singer tap for MockIncremental, built with the Meltano Singer SDK."
+description = "`tap-mock-fixture` is a Singer tap for MockFixture, built with the Meltano Singer SDK."
 readme = "README.md"
 authors = ["Bernard Wezeman <bernard.wezeman@quantile.nl>"]
 keywords = [
     "ELT",
-    "MockIncremental",
+    "MockFixture",
 ]
 license = "Apache-2.0"
 
@@ -32,7 +32,7 @@ ignore = [
     "ANN102",  # missing-type-cls
 ]
 select = ["ALL"]
-src = ["tap_mock_incremental"]
+src = ["tap_mock_fixture"]
 target-version = "py37"
 
 
@@ -40,7 +40,7 @@ target-version = "py37"
 allow-star-arg-any = true
 
 [tool.ruff.isort]
-known-first-party = ["tap_mock_incremental"]
+known-first-party = ["tap_mock_fixture"]
 
 [tool.ruff.pydocstyle]
 convention = "google"
@@ -51,4 +51,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 # CLI declaration
-tap-mock-incremental = 'tap_mock_incremental.tap:TapMockIncremental.cli'
+tap-mock-fixture = 'tap_mock_fixture.tap:TapMockFixture.cli'
