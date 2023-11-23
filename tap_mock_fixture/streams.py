@@ -12,7 +12,6 @@ class UsersStream(MockStream):
 
     name = "users"
     primary_keys = ["id"]
-    replication_key = "updated_at"
 
     schema = th.PropertiesList(
         th.Property("id", th.IntegerType),
